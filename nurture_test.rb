@@ -80,6 +80,7 @@ def unique(input)
     end
 
     output[:sessionsByUser][k] << session
+    output[:sessionsByUser][k].sort_by! { |i| i[:startTime] }
   end
 
   puts output
